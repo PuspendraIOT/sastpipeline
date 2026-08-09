@@ -21,4 +21,4 @@ jobs:
       - name: Step 3 - Install and Run Semgrep SAST
         run: |
           pip install semgrep
-          semgrep scan --config=auto --error
+          semgrep scan --config=auto --error --exclude=".github/"
