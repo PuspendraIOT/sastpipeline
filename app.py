@@ -1,8 +1,10 @@
 # app.py
+import os
+
 print("Starting our dummy application...")
 
-# BUG: This hardcoded password is a security risk!
-DATABASE_PASSWORD = "my_super_secret_password_123"
+# FIXED: The password is now safely loaded from the environment
+DATABASE_PASSWORD = os.getenv("DB_PASSWORD")
 
 def login():
     print("Connecting to the database...")
